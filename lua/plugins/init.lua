@@ -1,0 +1,16 @@
+return {
+  require("plugins.autopairs"),
+  require("plugins.breadcrumbs"),
+  require("plugins.ui"),
+  require("plugins.lsp"),
+  require("plugins.completion"),
+  require("plugins.dap"),
+  require("plugins.treesitter"),
+  require("plugins.misc"),
+  require("plugins.telescope"),
+  require("plugins.copilot"),
+  require("plugins.folding"),
+  require("plugins.surround"),
+  require("plugins.diffview"),
+  require("plugins.git"),
+}
