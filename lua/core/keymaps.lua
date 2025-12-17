@@ -54,6 +54,6 @@ map("n", "<leader>S", ufo.openAllFolds, { desc = "Unfold all code" })
 map("n", "<leader>H", ufo.closeAllFolds, { desc = "Fold all code" })
 
 -- Copy to system clipboard
-map("v", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
-map("n", "<leader>y", '"+y', { desc = "Copy to system clipboard" })
+map("v", "<leader>c", '"+y', { desc = "Copy to system clipboard" })
+map("n", "<leader>c", '"+y', { desc = "Copy to system clipboard" })
 
