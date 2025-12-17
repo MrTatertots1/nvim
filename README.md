@@ -12,15 +12,18 @@ Personal Neovim configuration built around **lazy.nvim**, optimized for .NET / C
 - **Debugging**: Configured with [nvim-dap](https://github.com/mfussenegger/nvim-dap) for debugging capabilities.
 - **Code folding**: with [nvim-ufo](https://github.com/kevinhwang91/nvim-ufo) for better code navigation.
 - **Syntax highlighting**: Powered by [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) for enhanced syntax awareness.
+    - **Comment Highlighting**: Using [todo-comments.nvim](https://github.com/folke/todo-comments.nvim) to highlight TODOs and FIXMEs.
 - **AI Assistance**: Integrated with [copilot.vim](https://github.com/github/copilot.vim) for AI-powered code suggestions.
 - **Git Integration**: Using
     - [vim-fugitive](https://github.com/tpope/vim-fugitive) for Git commands within Neovim.
     - [diffview.nvim](https://github.com/sindrets/diffview.nvim) for visualizing Git diffs.
     - [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) for Git signs in the gutter.
+    - [octo.nvim](https://github.com/pwntester/octo.nvim) for GitHub integration.
 - **Smart window management**
 - **Which-key** for keybinding hints.
 - **Statusline**: Customized with [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim).
 - **Enhanced UI feedback** (fidget, better messages)
+- **Markdown Preview**: Using [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) for live markdown preview.
 
 ---
 
