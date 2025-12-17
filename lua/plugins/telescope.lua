@@ -4,9 +4,36 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
 
     config = function()
-      require("telescope").setup({
+      local actions = require("telescope.actions")
+      local action_state = require("telescope.actions.state")
+      local telescope = require("telescope")
+      telescope.setup({
         defaults = {
           file_ignore_patterns = { "bin/", "obj/", "%.dll", "%.exe" },
+          mappings = {
+            i = {
+              -- Picker Navigation
+              ["<C-j>"] = actions.move_selection_next,
+              ["<C-k>"] = actions.move_selection_previous,
+              ["<Down>"] = actions.move_selection_next,
+              ["<Up>"] = actions.move_selection_previous,
+
+              -- Scroll Previewer
+              ["<PageDown>"] = actions.preview_scrolling_down,
+              ["<PageUp>"] = actions.preview_scrolling_up,
+            },
+            n = {
+              -- Picker Navigation
+              ["j"] = actions.move_selection_next,
+              ["k"] = actions.move_selection_previous,
+              ["<Down>"] = actions.move_selection_next,
+              ["<Up>"] = actions.move_selection_previous,
+
+              -- Scroll Previewer
+              ["<PageDown>"] = actions.preview_scrolling_down,
+              ["<PageUp>"] = actions.preview_scrolling_up,
+            },
+          }
         },
       })
     end,
