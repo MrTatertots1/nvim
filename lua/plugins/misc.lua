@@ -270,4 +270,18 @@ return {
       vim.keymap.set("n", "<leader>lt", "<cmd>TodoTelescope keywords=TODO,FIX,HACK,NOTE,WARN,PERF,TEST<CR>", { desc = "List all TODOs" })
     end,
   },
+
+  -- Markdown Preview
+  {
+    "iamcco/markdown-preview.nvim",
+    build = "cd app && npm install", -- required to install dependencies
+    ft = { "markdown" }, -- only load for markdown files
+    config = function()
+      -- Open preview in browser
+      vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreview<CR>", { desc = "Markdown Preview" })
+      vim.keymap.set("n", "<leader>ms", "<cmd>MarkdownPreviewStop<CR>", { desc = "Stop Markdown Preview" })
+    end,
+
+  },
+
 }
