@@ -1,5 +1,46 @@
 return {
 
+  -- TODO: Add octo.nvim for GitHub PR integration
+  {
+    "pwntester/octo.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim",
+      "nvim-tree/nvim-web-devicons",
+    },
+    cmd = { "Octo" },
+    config = function()
+      require("octo").setup({
+        default_remote = { "upstream", "origin" },
+        ssh_aliases = {},
+      })
+    end,
+  },
+
+  -- Diffview
+  {
+    "sindrets/diffview.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    -- event = "VeryLazy",
+    cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewFileHistory" },
+    keys = {
+      { "<leader>gdo", "<cmd>DiffviewOpen<cr>", desc = "Diffview Open" },
+      { "<leader>gdc", "<cmd>DiffviewClose<cr>", desc = "Diffview Close" },
+      { "<leader>gdh", "<cmd>DiffviewFileHistory<cr>", desc = "Diffview File History" },
+      { "<leader>gds", "<cmd>DiffviewOpen --staged<cr>", desc = "Diffview Open Staged" },
+    },
+    config = function()
+      require("diffview").setup({
+        enhanced_diff_hl = true,
+        use_icons = true,
+        icons = {
+          folder_closed = "",
+          folder_open = "",
+        },
+      })
+    end,
+  },
+
   -- Git Signs
   {
     "lewis6991/gitsigns.nvim",
