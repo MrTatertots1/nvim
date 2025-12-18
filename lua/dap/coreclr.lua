@@ -1,8 +1,11 @@
 local dap = require("dap")
+local dapui = require("dapui")
+
+local file_basepath = "/bin/Debug/"
 
 dap.adapters.coreclr = {
   type = "executable",
-  command = "/usr/local/bin/netcoredbg",
+  command = vim.fn.stdpath("data") .. "/mason/bin/netcoredbg",
   args = { "--interpreter=vscode" },
 }
 
@@ -12,7 +15,7 @@ dap.configurations.cs = {
     name = "Launch - NetCoreDbg",
     request = "launch",
     program = function()
-      return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. "/bin/Debug/net8.0/", "file")
+      return vim.fn.input("Path to dll: ", vim.fn.getcwd() .. file_basepath, "file")
     end,
   },
 }
