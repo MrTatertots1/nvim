@@ -13,6 +13,11 @@ return {
     event = "InsertEnter",
     config = function()
       local cmp = require("cmp")
+
+      -- Snippets
+      local luasnip = require("luasnip")
+      require("luasnip.loaders.from_vscode").lazy_load() -- Load snippets from vscode
+
       cmp.setup({
         snippet = {
           expand = function(args)
@@ -25,6 +30,7 @@ return {
         }),
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
+          { name = "luasnip" },
           { name = "buffer" },
         }),
       })
