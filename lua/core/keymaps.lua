@@ -22,14 +22,15 @@ map("n", "<F12>", function() require("dap").step_out() end, { desc = "Step Out" 
 map("n", "<Leader>b", function() require("dap").toggle_breakpoint() end, { desc = "Toggle Breakpoint" })
 map("n", "<Leader>dr", function() require("dap").repl.open() end, { desc = "Open REPL" })
 
+
 -- General
 map("i", "<C-s>", "<Esc>:w<CR>a", { desc = "Save file" })
 map("n", "<C-s>", ":w<CR>", { desc = "Save file" })
 
-map("i", "<C-j>", "<Left>", { desc = "Move cursor left" })
+map("i", "<C-j>", "<Down>", { desc = "Move cursor down" })
 map("i", "<C-l>", "<Right>", { desc = "Move cursor right" })
-map("i", "<C-h>", "<Up>", { desc = "Move cursor up" })
-map("i", "<C-k>", "<Down>", { desc = "Move cursor down" })
+map("i", "<C-h>", "<Left>", { desc = "Move cursor left" })
+map("i", "<C-k>", "<Up>", { desc = "Move cursor up" })
 
 -- Close buffer
 map("n", "<C-q>", ":bdelete<CR>", { desc = "Close buffer" })
@@ -47,7 +48,7 @@ local ufo = require("ufo")
 -- map("n", "<leader>S", "zO", { desc = "Unfold code recursively" })
 -- map("n", "<leader>a", "za", { desc = "Toggle fold under cursor" })
 map("n", "<leader>a", function() ufo.toggleFolded() end, { desc = "Toggle fold under cursor" })
-map("n", "K", function() ufo.peekFoldedLinesUnderCursor() end, { desc = "Peek folded lines under cursor" })
+-- map("n", "K", function() ufo.peekFoldedLinesUnderCursor() end, { desc = "Peek folded lines under cursor" })
 map("n", "<leader>h", "zc", { desc = "Fold code" })
 map("n", "<leader>s", "zo", { desc = "Unfold code" })
 map("n", "<leader>S", ufo.openAllFolds, { desc = "Unfold all code" })
