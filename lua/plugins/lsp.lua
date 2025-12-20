@@ -10,31 +10,45 @@ return {
         "github:Crashdummyy/mason-registry",
       },
       ensure_installed = {
-        "lua-language-server",
-        -- "lua_ls",
-
         "xmlformatter",
         "csharpier",
         "prettier",
-
         "stylua",
-        "bicep-lsp",
-        "html-lsp",
-        "css-lsp",
-        "eslint-lsp",
-        "typescript-language-server",
-        "json-lsp",
-        "rust-analyzer",
 
         -- C#
         "roslyn",
-        -- "rzls",
-        -- "csharp-language-server",
-        -- "omnisharp",
-      }
-    }
+      },
+      automatic_installation = true,
+    },
   },
-  { "williamboman/mason-lspconfig.nvim" },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = {
+        -- Core
+        "lua_ls",
+        "jsonls",
+        "html",
+        "cssls",
+        "eslint",
+        "ts_ls",
+        "svelte",
+        "tailwindcss",
+        "rust_analyzer",
+
+        -- Cloud / infra
+        -- "bicep",
+
+        -- Docker
+        "dockerls",
+        "docker_compose_language_service",
+
+
+      },
+      automatic_installation = true,
+
+    },
+  },
   {
     "seblyng/roslyn.nvim",
     ft = { "cs" },

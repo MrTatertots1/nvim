@@ -50,7 +50,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "K", vim.lsp.buf.hover, vim.tbl_extend("force", opts, { desc = "Hover Documentation" }))
 
     -- Code actions
-    vim.keymap.set("n", "<C-.>", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code Action" }))
+    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, vim.tbl_extend("force", opts, { desc = "Code Action" }))
 
     -- INFO: Rename symbol | Handled by inc-rename.nvim plugin 
 
@@ -75,3 +75,46 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
 vim.lsp.config("roslyn", {})
 -- vim.lsp.enable("roslyn")
+vim.lsp.config("lua_ls", {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { "vim" },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false,
+      },
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+})
+
+vim.lsp.config("dockerls", {})
+vim.lsp.config("docker_compose_language_service", {})
+-- vim.lsp.config()
+
+
+vim.diagnostic.config({
+  underline = false,
+  virtual_text = false,
+  update_in_insert = false,
+  severity_sort = true,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = " ",
+      [vim.diagnostic.severity.WARN] = " ",
+      [vim.diagnostic.severity.HINT] = " ",
+      [vim.diagnostic.severity.INFO] = " ",
+    },
+  },
+})
+
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = false,
+  }
+)
+
