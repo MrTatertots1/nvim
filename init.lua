@@ -21,11 +21,8 @@ require("lazy").setup(require("plugins"))
 -- ========================
 -- Runtime Config
 -- ========================
-require("core.options")
-require("core.utils")
-require("core.lsp")
+require("core")
 require("ui.colors")
 require("dap.coreclr")
+require("dap.neotest")
 
-require("core.autocmds")
-require("core.keymaps")
