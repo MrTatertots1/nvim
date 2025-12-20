@@ -19,7 +19,7 @@ map("n", "<F5>", function() require("dap").continue() end, { desc = "Start/Conti
 map("n", "<F10>", function() require("dap").step_over() end, { desc = "Step Over" })
 map("n", "<F11>", function() require("dap").step_into() end, { desc = "Step Into" })
 map("n", "<F12>", function() require("dap").step_out() end, { desc = "Step Out" })
-map("n", "<Leader>b", function() require("dap").toggle_breakpoint() end, { desc = "Toggle Breakpoint" })
+map("n", "<Leader>db", function() require("dap").toggle_breakpoint() end, { desc = "Toggle Breakpoint" })
 map("n", "<Leader>dr", function() require("dap").repl.open() end, { desc = "Open REPL" })
 
 
