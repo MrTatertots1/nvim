@@ -11,7 +11,7 @@ return {
       "nvim-neotest/nvim-nio",
     },
     config = function()
-      require("dapui").setup()
+    --   require("dapui").setup()
       require("dap.coreclr")
     end,
   },
