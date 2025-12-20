@@ -43,3 +43,7 @@ vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- ufo + Treesitter foldexpr
 -- Optional: customize virtual text for folded lines
 vim.opt.foldtext = "v:lua.require'ufo'.foldtext()"
 
+-- =======================
+-- Additional Settings
+-- =======================
+vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
