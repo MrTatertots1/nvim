@@ -3,11 +3,14 @@ local dapui = require("dapui")
 
 local file_basepath = "/bin/Debug/"
 
-dap.adapters.coreclr = {
+local netcoredbg_adapter = {
   type = "executable",
-  command = vim.fn.stdpath("data") .. "/mason/bin/netcoredbg",
+  command = vim.fn.stdpath("data") .. "/mason/bin/netcoredbg/net",
   args = { "--interpreter=vscode" },
 }
+
+-- dap.adapters.netcoredbg = netcoredbg_adapter -- 
+dap.adapters.coreclr = netcoredbg_adapter
 
 dap.configurations.cs = {
   {
