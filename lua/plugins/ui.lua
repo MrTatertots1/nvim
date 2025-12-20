@@ -114,8 +114,8 @@ return {
       })
 
       -- Cycle buffers in current split
-      vim.api.nvim_set_keymap("n", "<S-n>", "<cmd>BufferLineCycleNext<CR>", opts)
-      vim.api.nvim_set_keymap("n", "<S-p>", "<cmd>BufferLineCyclePrev<CR>", opts)
+      vim.api.nvim_set_keymap("n", "<C-n>", "<cmd>BufferLineCycleNext<CR>", opts)
+      vim.api.nvim_set_keymap("n", "<C-p>", "<cmd>BufferLineCyclePrev<CR>", opts)
 
       -- Pick a buffer in current split
       vim.api.nvim_set_keymap("n", "<leader>bp", "<cmd>BufferLinePick<CR>", opts)
