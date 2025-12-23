@@ -79,6 +79,13 @@ return {
 
         -- Optional: pre_hook / post_hook if needed
       })
+
+      vim.keymap.set(
+        "i",
+        "<C-_>",
+        "<Esc><Plug>(comment_toggle_linewise_current)a",
+        { desc = "Toggle comment on current line" }
+      )
     end
   },
 
