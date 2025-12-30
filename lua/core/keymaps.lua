@@ -36,9 +36,10 @@ map("i", "<C-k>", "<Up>", { desc = "Move cursor up" })
 
 -- Close buffer
 map("n", "<C-q>", ":bdelete<CR>", { desc = "Close buffer" })
+map("n", "<leader>q", ":q<CR>", { desc = "Close window" })
 
 -- Close Neovim
-map("n", "<leader>q", ":qa!<CR>", { desc = "Quit Neovim" })
+map("n", "<leader>Q", ":qa!<CR>", { desc = "Quit Neovim" })
 
 -- Folding
 local ufo = require("ufo")
