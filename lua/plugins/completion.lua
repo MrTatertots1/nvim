@@ -32,6 +32,8 @@ return {
           { name = "nvim_lsp" },
           { name = "luasnip" },
           { name = "buffer" },
+          { name = "path" },
+          { name = "vim-dadbod-completion" },
         }),
       })
 

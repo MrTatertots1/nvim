@@ -49,7 +49,7 @@ return {
     config = function()
       require("toggleterm").setup({
         size = 15,
-        open_mapping = [[<leader>t]],
+        open_mapping = [[<leader>tt]],
         direction = "horizontal",
         shade_terminals = true,
         -- restrict the mapping to normal mode only
@@ -387,5 +387,16 @@ return {
       close_filetypes_on_save = { "NvimTree", "toggleterm", "terminal", "Trouble", "trouble" },
     },
   },
+
+  -- Dooing Todo List
+  {
+    "atiladefreitas/dooing",
+    config = function()
+      require("dooing").setup({})
+
+      -- vim.keymap.set("n", "<leader>dt", "<cmd>DooingToggle<CR>", { desc = "Toggle Todo List" })
+
+    end,
+  }
 
 }

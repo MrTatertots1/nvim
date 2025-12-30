@@ -12,4 +12,5 @@ return {
   require("plugins.surround"),
   require("plugins.git"),
   require("plugins.misc"),
+  require("plugins.database"),
 }
