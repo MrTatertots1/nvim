@@ -35,6 +35,13 @@ return {
             },
           }
         },
+        pickers = {
+          find_files = {
+            hidden = true, -- Show hidden files (dotfiles)
+            no_ignore = true, -- Show files in .gitignore
+            no_ignore_parent = true, -- Show files ignored by parent .gitignore
+          },
+        },
       })
     end,
 
