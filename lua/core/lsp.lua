@@ -7,12 +7,12 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Line diagnostics" })
+-- vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Line diagnostics" })
 
 -- ========================
 -- Signature help
 -- ========================
-vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature help" })
+-- vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature help" }) -- TODO: fix?
 
 -- vim.api.nvim_create_autocmd("BufWritePre", {
 -- 	buffer = bufnr,
@@ -98,7 +98,7 @@ vim.lsp.config("docker_compose_language_service", {})
 
 
 vim.diagnostic.config({
-  underline = false,
+  underline = true,
   virtual_text = false,
   update_in_insert = false,
   severity_sort = true,
